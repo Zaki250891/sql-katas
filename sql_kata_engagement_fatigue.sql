@@ -15,5 +15,9 @@ SELECT
     s.campaign_id,
     s.channel,
     COUNT(DISTINCT e.id) AS engagements
-FROM sends s
+FROM sends current_sends
+LEFT JOIN sends previous_sends 
+ON current_sends.user_id = previous_sends.user_id
+AND previous.sent_at < current.sent_at
+AND previous.sent_at >= current.sent_at - INTERVAL '7 days'
 
