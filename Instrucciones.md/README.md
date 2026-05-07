@@ -13,7 +13,7 @@ tablas:
 engagement_events: *id, event_time, campaign_id, channel, event_type*
 
 campaign_sends: *id, user_id, sent_at, campaign_id, channel*
-
+git
 
 Dudas: ¿De dónde y cómo saco el sent_at?, ¿cuáles son las fórmulas que necesito para ésto? 
 
